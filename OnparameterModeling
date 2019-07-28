@@ -1,0 +1,3 @@
+Acabo de darme cuenta de que la manera en que modelo los parámetros, después de un marcador de param numérico se podría poner lo que sea y el programa simplemente lo ignora. Además para tomar cada dato se itera varias veces sobre el mismo string.
+
+Una alternativa para hacer esto es hacer una clase contenedora de los parámetros, cuyo constructor requiera los args y que se rellene a sí mismo. Desde la interfaz solamente se llamaría a la clase de parametros y hacer lo que sea necesario. Es más sencillo me parece a mí.

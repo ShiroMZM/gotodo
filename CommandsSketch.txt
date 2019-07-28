@@ -1,0 +1,43 @@
+anadirEntrada:     ---
+    gotodo addE -cno 1 -t Titulo de la entrada -b Cuerpo de la entrada
+    gotodo addE -c Universidad -t Relizar proyecto -b Empezar a investigar y crear el proyecto para BD2
+    gotodo addE -t Segundo titulo -b Cuerpo del segundo titulo
+    gotodo addE -b Esta es una entrada sin categoria con nombre por defecto
+    gotodo addE [-cno 1 | -c NbrCat] [-t TituloEntrada] -b Cuerpo de la entrada
+anadirCategoria:   ---
+    gotodo addC {NbrCat}
+borrarEntrada:     ---
+    gotodo delE -cno 2 -t Realizar proyecto
+    gotodo delE -c Compu -t Titulo de la entrada
+    gotodo delE -u 3
+    gotodo delE { -u 1 | { -c NbrCat | -cno 1 } -t TEntrada }
+borrarCategoria:
+    gotodo delC {-c NbrCat | -cno 1}
+check:             ---
+    gotodo check -cno 2 -t Titulo de la entrada
+    gotodo check -c Compu -t Organizar directorios
+    gotodo check -u 5
+    gotodo check { -u 1 | { -c NbrCat | -cno 1 } -t TEntrada }
+uncheck:           ---
+    gotodo uncheck -cno 2 -t Titulo de la entrada
+    gotodo uncheck -c Compu -t Organizar directorios
+    gotodo uncheck { -cno 1 | -c NbrCat} -t TEntrada
+consultarEntradas:       ---
+    gotodo todos
+    gotodo todos -sd 
+    gotodo todos -sdc
+    gotodo todos -c Compu [-a|-p|-d] //de no indicarse por defecto va a ser -p
+    gotodo todos -cno 5 [-a|-p|-d]
+    gotodo todos [ -c | -cno ] [ -sd | -sdc ] [-a|-p|-d]
+consultarCategorias:    ---
+    gotodo categories
+
+---------------------
+-cno    | Numero de categoria
+-t      | Titulo de la entrada
+-b      | Cuerpo de la entrada
+-c      | Nombre de la categoria
+-u      | Indice de unchecked
+-a      | Todos, incluyendo ya checkeados
+-p      | Pendientes, es decir, unchecked
+-d      | (Done) HechosS

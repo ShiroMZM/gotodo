@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - testMain",
+            "request": "launch",
+            "mainClass": "GoTODO/app.testMain",
+            "projectName": "GoTODO"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - CommandInterface",
+            "request": "launch",
+            "mainClass": "GoTODO/app.CommandInterface",
+            "projectName": "GoTODO",
+            "args": "help"
+        }
+    ]
+}
